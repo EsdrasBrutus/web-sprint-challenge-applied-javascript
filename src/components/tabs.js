@@ -40,7 +40,6 @@ const tabsAppender = (selector) => {
   const URL = 'https://lambda-times-api.herokuapp.com/topics'
   axios.get(URL)
   .then(res => { 
-    console.log(res.data.topics)
     css.appendChild(Tabs(res.data.topics))
   })
 
