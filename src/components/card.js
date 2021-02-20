@@ -20,24 +20,24 @@ const Card = (article) => {
   // </div>
   //
   const card = document.createElement('div')
-  const headline = document.createElement('headline')
+  const headLine = document.createElement('div')
   const author = document.createElement('div')
   const imgBox = document.createElement('div')
   const img = document.createElement('img')
   const name = document.createElement('span')
 
   card.classList.add('card')
-  headline.classList.add('headline')
+  headLine.classList.add('headline')
   author.classList.add('author')
   imgBox.classList.add('img-container')
 
-  card.appendChild(headline)
+  card.appendChild(headLine)
   card.appendChild(author)
   author.appendChild(imgBox)
   imgBox.appendChild(img)
   author.appendChild(name)
 
-  headline.textContent = article.headline
+  headLine.textContent = article.headline
   img.setAttribute('src', article.authorPhoto)
   name.textContent = article.authorName
 
@@ -47,6 +47,8 @@ const Card = (article) => {
 
   return card
 }
+
+
 
 const cardAppender = (selector) => {
   // TASK 6
